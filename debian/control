@@ -1,0 +1,62 @@
+Source: haskell-monads-tf
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Adams <clint@debian.org>
+Priority: optional
+Section: haskell
+Rules-Requires-Root: no
+Build-Depends:
+ cdbs,
+ debhelper (>= 10),
+ ghc (>= 8),
+ ghc-prof,
+ haskell-devscripts (>= 0.13),
+Build-Depends-Indep: ghc-doc
+Standards-Version: 4.5.0
+Homepage: http://hackage.haskell.org/package/monads-tf
+Vcs-Browser: https://salsa.debian.org/haskell-team/DHG_packages/tree/master/p/haskell-monads-tf
+Vcs-Git: https://salsa.debian.org/haskell-team/DHG_packages.git [p/haskell-monads-tf]
+
+Package: libghc-monads-tf-dev
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}, ${shlibs:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: monad classes, using type families
+ Monad classes using type families, with instances for various monad
+ transformers, inspired by the paper /Functional Programming with
+ Overloading and Higher-Order Polymorphism/, by Mark P Jones, in Advanced
+ School of Functional Programming, 1995
+ (http://web.cecs.pdx.edu/~mpj/pubs/springschool.html).
+ .
+ This package contains the normal library files.
+
+Package: libghc-monads-tf-prof
+Architecture: any
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Provides: ${haskell:Provides}
+Description: monad classes, using type families; profiling libraries
+ Monad classes using type families, with instances for various monad
+ transformers, inspired by the paper /Functional Programming with
+ Overloading and Higher-Order Polymorphism/, by Mark P Jones, in Advanced
+ School of Functional Programming, 1995
+ (http://web.cecs.pdx.edu/~mpj/pubs/springschool.html).
+ .
+ This package contains the libraries compiled with profiling enabled.
+
+Package: libghc-monads-tf-doc
+Architecture: all
+Section: doc
+Depends: ${haskell:Depends}, ${misc:Depends}
+Recommends: ${haskell:Recommends}
+Suggests: ${haskell:Suggests}
+Description: monad classes, using type families; documentation
+ Monad classes using type families, with instances for various monad
+ transformers, inspired by the paper /Functional Programming with
+ Overloading and Higher-Order Polymorphism/, by Mark P Jones, in Advanced
+ School of Functional Programming, 1995
+ (http://web.cecs.pdx.edu/~mpj/pubs/springschool.html).
+ .
+ This package contains the documentation files.
